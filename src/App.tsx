@@ -7,7 +7,9 @@ import { AppPage } from './declarations';
 import Menu from './components/Menu';
 import Home from './pages/Home';
 import List from './pages/List';
-import { home, list } from 'ionicons/icons';
+import Login from './pages/Login';
+import ChangePassword from './pages/ChangePassword';
+import { search, key, airplane } from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -30,14 +32,14 @@ import './theme/variables.css';
 
 const appPages: AppPage[] = [
   {
-    title: 'Home',
+    title: 'Buscar AWB',
     url: '/home',
-    icon: home
+    icon: search
   },
   {
-    title: 'List',
-    url: '/home/list',
-    icon: list
+    title: 'Alterar Senha',
+    url: '/change-password',
+    icon: key
   }
 ];
 
@@ -47,9 +49,10 @@ const App: React.FC = () => (
       <IonSplitPane contentId="main">
         <Menu appPages={appPages} />
         <IonRouterOutlet id="main">
+          <Route path="/change-password" component={ChangePassword} exact={true}/>
+          <Route path="/login" component={Login} exact={true}/>
           <Route path="/home" component={Home} exact={true} />
-          <Route path="/home/list" component={List} exact={true} />
-          <Route path="/" render={() => <Redirect to="/home"/> } exact={true} />
+          <Route path="/" render={() => <Redirect to="/login"/> } exact={true} />
         </IonRouterOutlet>
       </IonSplitPane>
     </IonReactRouter>

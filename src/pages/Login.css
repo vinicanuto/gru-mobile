@@ -1,0 +1,38 @@
+div .login{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;  
+}
+
+.div-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+ion-button{
+  margin-top: 10px;
+}
+
+.login-input{
+  --background: #f1f1f1;
+  margin-top: 5px;
+}
+
+input{
+  background-color: #f1f1f1;
+  border: none; 
+}
+
+.page{
+    --background: rgba(0, 0, 0, 0.801);
+}
