@@ -9,7 +9,7 @@ import {
     } from '@ionic/react'
 import { Redirect } from 'react-router-dom';
 
-const Login2: React.FC= () => {
+const Login: React.FC= () => {
 
     const [username,setUsername] = useState();
     const [password,setPassword] = useState();
@@ -24,7 +24,7 @@ const Login2: React.FC= () => {
     }
 
     return (
-      isLoggedIn ? <Redirect to="/home"/> : 
+      isLoggedIn ? <Redirect to="/search-awb"/> : 
       <IonPage>
         <IonContent className="page">
             <div className="div-imagem">
@@ -50,5 +50,5 @@ const Login2: React.FC= () => {
     );
   };
   
-  export default Login2;
+  export default Login;
   
