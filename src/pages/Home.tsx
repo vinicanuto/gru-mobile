@@ -9,10 +9,11 @@ import {
   IonImg
   } from '@ionic/react';
 
-import React from 'react';
+import React,{useState} from 'react';
 import './Home.css';
 
 import HeaderApp from '../components/Header';
+import Item from '../components/Item';
 
 
 const items = [{
@@ -65,28 +66,33 @@ const items = [{
   img:"/assets/companies/aal.png",
   status: "Pendente",
   destino : "Estados Unidos"
-}].map(x=>{
-return (
-      <IonItem key={x.id} href="#">
-        <IonThumbnail className="thumb">
-          <IonImg src={x.img}/>
-        </IonThumbnail>
-        <IonLabel>
-          <h2>Carga: {x.id}</h2>
-          <p>Status: {x.status}</p>
-        </IonLabel>
-      </IonItem>      
-  )
-})
+}];
+
+
 
 const HomePage: React.FC = () => {
+
+  const[listItems,setListItems] = useState(items);
+  const[searchedItem,setSearchedItem] = useState('');
+
+async function handleInput(valor:any){
+    await setSearchedItem(valor);
+  }
+
+  /* lista todos
+  (listItems.map(x => {
+          return <Item key={x.id} {...x}/>;
+      }))*/
+  
   return (
     <IonPage>
       <HeaderApp/>
       <IonContent>
-      <IonSearchbar type="tel" placeholder="Buscar AWB" />
+      <IonSearchbar inputmode="search" type="tel" placeholder="Buscar AWB" value={searchedItem} onIonChange={e=> handleInput(e.detail.value)} />
       <IonList> 
-        {items}
+      {!searchedItem ? null: (listItems.filter(i=> i.id.toString().includes(searchedItem.toString())).map(x => {
+        return <Item key={x.id} {...x}/>;
+    }))} 
       </IonList>
       </IonContent>
     </IonPage>

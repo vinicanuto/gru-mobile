@@ -9,7 +9,7 @@ import { AppPage } from '../declarations';
 import Menu from '../components/Menu';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
-import isAuthenticaded from '../components/Authentication';
+import isAuthenticaded from '../utils/Authentication';
 import ChangePassword from '../pages/ChangePassword';
 
 const appPages: AppPage[] = [
@@ -52,6 +52,7 @@ const Routes = ()  => {
           <Route path="/" render={() => <Redirect to="/login"/> } exact={true} />
           <Route path="/login" component={Login} exact={true}/>
           <PrivateRoute path="/search-awb" component={Home} exact={true} />
+          <PrivateRoute path="/search-awb/:id" component={Home} exact={true} />
           <PrivateRoute path="/change-password" component={ChangePassword} exact={true}/>
         </IonRouterOutlet>
       </IonSplitPane>
