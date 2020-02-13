@@ -13,60 +13,130 @@ import React,{useState} from 'react';
 import './Home.css';
 
 import HeaderApp from '../components/Header';
-import Item from '../components/Item';
+import Accordion from '../components/Accordion';
 
 
 const items = [{
   id: 1,
+  tipoawb: "IMPORT",
   img:"/assets/companies/aal.png",
   status: "Em trânsito",
-  destino : "Itália"
-}, {
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
   id: 2,
+  tipoawb: "IMPORT",
   img:"/assets/companies/gol.png",
-  status: "Entregue",
-  destino : "Brasil"
-}, {
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
   id: 3,
+  tipoawb: "IMPORT",
   img:"/assets/companies/tam.png",
-  status: "Pendente",
-  destino : "Estados Unidos"
-}, {
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
   id: 4,
+  tipoawb: "IMPORT",
   img:"/assets/companies/gol.png",
-  status: "Pendente",
-  destino : "Estados Unidos"
-}, {
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
   id: 5,
-  img:"/assets/companies/gol.png",
-  status: "Pendente",
-  destino : "Estados Unidos"
-}, {
+  tipoawb: "IMPORT",
+  img:"/assets/companies/tam.png",
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
   id: 6,
-  status: "Pendente",
+  tipoawb: "IMPORT",
   img:"/assets/companies/aal.png",
-  destino : "Estados Unidos"
-}, {
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
   id: 7,
-  img:"/assets/companies/tam.png",
-  status: "Pendente",
-  destino : "Estados Unidos"
-}, {
-  id: 8,
-  status: "Pendente",
+  tipoawb: "IMPORT",
   img:"/assets/companies/gol.png",
-  destino : "Estados Unidos"
-}, {
-  id: 9,
-  status: "Pendente",
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
+  id: 8,
+  tipoawb: "IMPORT",
   img:"/assets/companies/tam.png",
-  destino : "Estados Unidos"
-}, {
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
+  id: 9,
+  tipoawb: "IMPORT",
+  img:"/assets/companies/gol.png",
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
   id: 10,
+  tipoawb: "IMPORT",
   img:"/assets/companies/aal.png",
-  status: "Pendente",
-  destino : "Estados Unidos"
-}];
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
+  id: 11,
+  tipoawb: "IMPORT",
+  img:"/assets/companies/gol.png",
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+,{
+  id: 12,
+  tipoawb: "IMPORT",
+  img:"/assets/companies/tam.png",
+  status: "Em trânsito",
+  origem: 'MAD',
+  destino : "GRU",
+  documento: "DI/DAS 0000923830038",
+  natureza: "NOR",
+}
+];
 
 
 
@@ -91,7 +161,12 @@ async function handleInput(valor:any){
       <IonSearchbar inputmode="search" type="tel" placeholder="Buscar AWB" value={searchedItem} onIonChange={e=> handleInput(e.detail.value)} />
       <IonList> 
       {!searchedItem ? null: (listItems.filter(i=> i.id.toString().includes(searchedItem.toString())).map(x => {
-        return <Item key={x.id} {...x}/>;
+        return (
+        <Accordion key={x.id} {...x}> 
+            <>
+            </>
+        </Accordion>
+        );
     }))} 
       </IonList>
       </IonContent>
