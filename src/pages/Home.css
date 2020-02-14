@@ -5,15 +5,11 @@
 
 
 ion-toolbar {
-  --background: rgba(0, 0, 0, 0.801);
+  --background: #111111;
 }
 
 ion-menu-button{
   color: #f5f5f5;
-}
-
-ion-list {
-  --background: #BFD730;
 }
 
 ion-label{
@@ -31,8 +27,4 @@ ion-label{
 ion-grid {
   margin-left: 20px;
   margin-right: 20px;
-}
-
-ion-button {
-  --color:#BFD730;
 }

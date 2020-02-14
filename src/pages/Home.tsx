@@ -1,12 +1,8 @@
 import {
   IonContent,
-  IonItem,
-  IonLabel,
   IonList,
   IonPage,
   IonSearchbar,
-  IonThumbnail,
-  IonImg
   } from '@ionic/react';
 
 import React,{useState} from 'react';
@@ -142,7 +138,7 @@ const items = [{
 
 const HomePage: React.FC = () => {
 
-  const[listItems,setListItems] = useState(items);
+  const[listItems] = useState(items);
   const[searchedItem,setSearchedItem] = useState('');
 
 async function handleInput(valor:any){

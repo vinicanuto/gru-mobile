@@ -5,9 +5,12 @@ import {
     IonPage,
     IonInput,
     IonButton,
-    IonItem
+    IonItem,
+    IonIcon
     } from '@ionic/react'
 import { Redirect } from 'react-router-dom';
+
+import { person, lock } from 'ionicons/icons';
 
 const Login: React.FC= () => {
 
@@ -31,18 +34,20 @@ const Login: React.FC= () => {
                 <img src="/assets/logo/logo.png" alt="GRU Airport" />
             </div>
             <div className="login">
-              <form onSubmit={e=> {handleSubmit(e)}}>
-                <IonItem className="login-input">
+              <form  onSubmit={e=> {handleSubmit(e)}}>
+                <IonItem className="login-input" lines="none">
+                  <IonIcon color="secondary" slot="start" icon={person}></IonIcon>
                     <IonInput  name="username" value={username} required 
-                      type="text" placeholder="Digite seu usuário"
+                      type="text" placeholder="Usuário"
                       onIonChange={e=> setUsername(e.detail.value)}/>  
                 </IonItem>
 
-                <IonItem className="login-input" >
-                    <IonInput name="password" required value={password} type="password"  placeholder="Digite sua senha"
+                <IonItem className="login-input" lines="none">
+                    <IonIcon color="secondary" slot="start" icon={lock}></IonIcon>
+                    <IonInput name="password" required value={password} type="password"  placeholder="Senha"
                       onIonChange={e=> setPassword(e.detail.value)}/>  
                 </IonItem>
-                <IonButton expand="full" color="primary" type="submit"> Acessar </IonButton>
+                <IonButton  size="default" expand="block"  fill="solid" color="primary"  type="submit" onKeyDownCapture={e=> {handleSubmit(e)}}> <p>Acessar</p> </IonButton>
               </form>  
             </div>    
         </IonContent>

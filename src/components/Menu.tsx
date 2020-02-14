@@ -13,16 +13,17 @@ import {
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { AppPage } from '../declarations';
+import isAuthenticaded from '../utils/Authentication';
 
 interface MenuProps extends RouteComponentProps {
   appPages: AppPage[];
 }
 
 const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
+  isAuthenticaded() ?
   <IonMenu contentId="main" type="overlay">
     <IonHeader>
       <IonToolbar>
-        <IonTitle>Menu</IonTitle>
       </IonToolbar>
     </IonHeader>
     <IonContent>
@@ -40,6 +41,6 @@ const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
       </IonList>
     </IonContent>
   </IonMenu>
-);
+: null);
 
 export default withRouter(Menu);

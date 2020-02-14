@@ -1,5 +1,5 @@
 import React,{useState, useRef} from "react";
-import { IonItem,IonThumbnail, IonImg, IonLabel,IonAvatar,IonListHeader,IonList } from '@ionic/react';
+import { IonItem,IonThumbnail, IonImg, IonLabel,IonListHeader,IonList } from '@ionic/react';
 
 
 
@@ -20,13 +20,11 @@ const Accordion = ({...props}) =>{
     return(
         <div className="accordion-section">
             
-            <IonItem detail={false} button={true} className="accordion" onClick={toggleAccordion}>
+            <IonItem detail={true} button={true} className={"accordion"} onClick={toggleAccordion} detailIcon={active && props.children ? "arrow-down" : "arrow-forward" }>
                 <IonThumbnail className="thumb">
                   <IonImg src={props.img}/>
                 </IonThumbnail>
-                <IonAvatar slot="end" className={active && props.children ? "accordion-icon rotate": "accordion-icon"}>
-                    <IonImg src="/assets/icon/chevron-forward-outline.svg"/>
-                </IonAvatar>
+
                 <IonLabel className="accordion-title">
                   <h2>AWB: {props.id}</h2>
                   <p>Status: {props.status}</p>

@@ -46,7 +46,7 @@ const PrivateRoute = (props: PrivateRouteProps) => {
 const Routes = ()  => {
     return(
     <IonReactRouter>
-      <IonSplitPane contentId="main">
+      <IonSplitPane contentId="main" when="never">
         <Menu appPages={appPages} />
         <IonRouterOutlet id="main">
           <Route path="/" render={() => <Redirect to="/login"/> } exact={true} />
