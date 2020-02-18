@@ -21,16 +21,36 @@ const items = [{
   destino : "GRU",
   documento: "DI/DAS 0000923830038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 2,
   tipoawb: "IMPORT",
   img:"/assets/companies/gol.png",
-  status: "Em trânsito",
+  status: "Pendente",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 00009223355538",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 3,
@@ -39,8 +59,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 0000926666038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 4,
@@ -49,8 +79,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 0000977730038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 5,
@@ -59,8 +99,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 0008977003338",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 6,
@@ -69,8 +119,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 0002323830038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 7,
@@ -79,8 +139,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 0000929797038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 8,
@@ -89,8 +159,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 000765830038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 9,
@@ -99,8 +179,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 000067890038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 10,
@@ -109,8 +199,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 00002223830038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 11,
@@ -119,8 +219,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 0333333830038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ,{
   id: 12,
@@ -129,8 +239,18 @@ const items = [{
   status: "Em trânsito",
   origem: 'MAD',
   destino : "GRU",
-  documento: "DI/DAS 0000923830038",
+  documento: "DI/DAS 0666666666038",
   natureza: "NOR",
+  volpesomantra:"1/195,000",
+  volpesorecebido:"1/196",
+  volpesoentregue:"1/196,000",
+  volpesoarmazenado:"1/196,000",
+  volpesoretornado:"0/0,000",
+  consignatariomantra:"IBERIA LINEAS AEREAS",
+  fechar:"No",
+  acaopendente:"No",
+  tc: "TC6",
+  placaveiculo:"0005555"
 }
 ];
 
@@ -155,7 +275,7 @@ async function handleInput(valor:any){
       <HeaderApp/>
       <IonContent>
       <IonSearchbar inputmode="search" type="tel" placeholder="Buscar AWB" value={searchedItem} onIonChange={e=> handleInput(e.detail.value)} />
-      <IonList> 
+      <IonList className="list-content"> 
       {!searchedItem ? null: (listItems.filter(i=> i.id.toString().includes(searchedItem.toString())).map(x => {
         return (
         <Accordion key={x.id} {...x}> 

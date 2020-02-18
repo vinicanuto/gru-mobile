@@ -12,6 +12,14 @@ ion-menu-button{
   color: #f5f5f5;
 }
 
+.content-menu ion-item{
+  --background: #fcf9f9f5;
+}
+
+ion-content{
+  --background: #fcf9f9f5;
+}
+
 ion-label{
   padding-left: 10px;
 }
@@ -20,11 +28,8 @@ ion-label{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
-ion-grid {
-  margin-left: 20px;
-  margin-right: 20px;
+.list-content{
+  background-color: rgba(219, 217, 217, 0.089);
 }

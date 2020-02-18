@@ -2,16 +2,21 @@
     flex-direction: column;
 }
 
-  
-  .accordion{
-    background-color: #918b8b;
-    cursor: pointer;
+  .accordion {
     display: flex;
     transition: background-color 0.6 ease;
+    margin: 4px 8px;
+    box-shadow:0 3px 10px 0 rgba(172, 172, 172, 0.486);
+    border-width: 1px;
+    border-radius: 8px;
+    --background:linear-gradient(300deg,rgba(247, 242, 242, 0.733) 0%, rgba(242, 242, 243, 0.911) 18.5%, rgb(253, 253, 253) 100%) !important;
+    --color:rgb(55, 56, 55);
+    --background-activated:rgb(207, 208, 209);
+    --detail-icon-color: rgb(16, 68, 2);
 }
 
-.accordion:hover.active{
-    background-color: #666;
+.accordion-title p{
+    color:rgb(65, 66, 64);
 }
 
 .accordion-icon {
@@ -25,30 +30,47 @@
     margin-right: 2px;
 }
 
-.accordion-content{
+.accordion-content {
     overflow: hidden;
     transition: max-height 0.6s ease;
+    margin: 0px 2px;
 }
 
-.accordion-text{
-    padding: 18px;
+.accordion-list ion-item{
     font-size: 14px;
 }
 
-.accordion-content ion-item {
-    margin-left: 8px;
-    margin-right: 8px;
-    --background: rgba(238, 237, 237, 0.5);
+.accordion-list ion-list{
+    margin: 5px 10px;
+    background: rgb(238, 235, 235);
+    box-shadow:0 3px 10px 0 rgba(172, 172, 172, 0.486);
+    padding: 4px;
+}
+
+.accordion-list ion-list-header{
+    border-radius: 5px;
+}
+
+
+.accordion-content ion-item{
+    padding-bottom: 2px;
+    --background: linear-gradient(300deg,rgba(247, 242, 242, 0.733) 0%, rgba(236, 236, 241, 0.911) 18.5%, rgb(253, 253, 253) 100%) !important;
+}
+
+.accordion-content span{
+    color: rgb(56, 56, 56);
     font-size: 14px;
-    color: #666;
-    align-items: center;
-    justify-content: start;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-stretch: expanded;
 }
 
 .accordion-content ion-list-header {
-    font-size: 12px;
-    margin-top: 5px;
-    font-weight: 500;
-    color: #333;
+    color: rgb(255, 255, 255);
+    --background: rgb(161, 182, 43);
+    font-weight: 600;    
+} 
+
+.last-item {
+    --border-width: 0px 0 2px 0px;
+    --border-radius: 8px;
 }

@@ -5,6 +5,7 @@ import {
     IonInput,
     IonButton,
     IonItem,
+    IonLabel
     } from '@ionic/react'
 
 import HeaderApp from '../components/Header';
@@ -16,20 +17,24 @@ const ChangePassword: React.FC = () =>{
     <IonPage>
         <HeaderApp />
         <IonContent>
+            <div className="header">
+                <IonLabel>
+                    <h2>Alterar Senha</h2>
+                </IonLabel>
+            </div>
+             
             <div className="altera-senha">
                 <form>
-                    <IonItem>
-                        <IonInput  name="old-password" required type="password" placeholder="Digite seu senha antiga"/>
+                    <IonItem lines="full">
+                        <IonInput  name="current-password" required type="password" placeholder="Senha atual"/>
                     </IonItem>
-
-                    <IonItem>
-                        <IonInput name="new-password" required type="password" placeholder="Digite sua nova senha"/>  
+                    <IonItem lines="full">
+                        <IonInput name="new-password" required type="password" placeholder="Nova senha"/>  
                     </IonItem>
-
-                    <IonItem>
-                        <IonInput name="new-password2" required type="password" placeholder="Digite novamente sua nova senha"/>  
+                    <IonItem lines="full">
+                        <IonInput name="repeat-new-password" required type="password" placeholder="Repita nova senha"/>  
                     </IonItem>
-                    <IonButton expand="full" color="primary" type="submit" > Alterar senha </IonButton>
+                    <IonButton expand="block" color="primary" type="submit" >Confirmar</IonButton>
                 </form>
             </div>     
         </IonContent>
