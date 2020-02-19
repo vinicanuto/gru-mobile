@@ -1,6 +1,6 @@
 
- const  isAuthenticated = () => {
-     if (localStorage.logged) {
+function  isAuthenticated() {
+     if (localStorage.getItem("logged")) {
         return true
     } return false;}
 

@@ -7,12 +7,16 @@ import {
   IonList,
   IonMenu,
   IonMenuToggle,
-  IonToolbar
+  IonToolbar,
+  IonFooter,
+  IonImg
 } from '@ionic/react';
 import React from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import { AppPage } from '../declarations';
 import isAuthenticaded from '../utils/Authentication';
+
+import './Menu.css'
 
 interface MenuProps extends RouteComponentProps {
   appPages: AppPage[];
@@ -30,8 +34,8 @@ const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
         {appPages.map((appPage, index) => {
           return (
             <IonMenuToggle key={index} autoHide={false}>
-              <IonItem routerLink={appPage.url} routerDirection="none">
-                <IonIcon slot="start" icon={appPage.icon} color="primary"/>
+              <IonItem lines="full" routerLink={appPage.url} routerDirection="none">
+                <IonIcon slot="start" icon={appPage.icon} color={appPage.color}/>
                 <IonLabel>{appPage.title}</IonLabel>
               </IonItem>
             </IonMenuToggle>
@@ -39,6 +43,12 @@ const Menu: React.FunctionComponent<MenuProps> = ({ appPages }) => (
         })}
       </IonList>
     </IonContent>
+    <IonFooter className="footer ion-no-border">
+      <IonImg src="/assets/icon/reply.png" alt="Reply running man logo"/>
+        <IonLabel>
+            © Copyright 2009 - 2020 - Logistics Reply
+        </IonLabel>
+    </IonFooter>
   </IonMenu>
 : null);
 

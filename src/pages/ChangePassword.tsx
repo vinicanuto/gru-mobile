@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {
     IonContent,
     IonPage,
@@ -13,6 +13,29 @@ import HeaderApp from '../components/Header';
 import './ChangePassword.css';
 
 const ChangePassword: React.FC = () =>{
+
+    const [currentPassword, setCurrentPassword] = useState();
+    const [newPassword, setNewPassword] = useState();
+    const [repeatPassword, setRepeatPassword] = useState();
+    const [errorCurrentPassword, setErrorCurrentPassword] = useState();
+    const [errorMismatchNewPassword, setErrorMismatchNewPassword] = useState();
+
+    function handleSubmit(e: any){
+        e.preventDefault();
+        currentPassword !== "user" ? setErrorCurrentPassword('* Senha atual incorreta') : setErrorCurrentPassword(null);
+        newPassword !== repeatPassword ? setErrorMismatchNewPassword('* As senhas não coincidem') : setErrorMismatchNewPassword(null);
+    }
+
+    function handleChangeCurrentPassword(e:any){
+        setCurrentPassword(e.detail.value);
+        setErrorCurrentPassword(null);
+    }
+
+    function handleChangeNewPassword(e:any){
+        setNewPassword(e.detail.value);
+        setErrorMismatchNewPassword(null);
+    }
+
     return (
     <IonPage>
         <HeaderApp />
@@ -24,17 +47,25 @@ const ChangePassword: React.FC = () =>{
             </div>
              
             <div className="altera-senha">
-                <form>
+                <form  onSubmit={e=> handleSubmit(e)}>
                     <IonItem lines="full">
-                        <IonInput  name="current-password" required type="password" placeholder="Senha atual"/>
+                        <IonInput  name="current-password" required type="password" placeholder="Senha atual" onIonChange={e=> handleChangeCurrentPassword(e)}/>
+                    </IonItem>
+                    {errorCurrentPassword ? 
+                        <IonLabel color="danger"><br/> {errorCurrentPassword} </IonLabel> 
+                            : errorCurrentPassword
+                    }
+                    <IonItem lines="full">
+                        <IonInput name="new-password" required type="password" placeholder="Nova senha" onIonChange={e=> handleChangeNewPassword(e)} />  
                     </IonItem>
                     <IonItem lines="full">
-                        <IonInput name="new-password" required type="password" placeholder="Nova senha"/>  
+                        <IonInput name="repeat-new-password" required type="password" placeholder="Repita nova senha" onIonChange={e=> setRepeatPassword(e.detail.value)}/>  
                     </IonItem>
-                    <IonItem lines="full">
-                        <IonInput name="repeat-new-password" required type="password" placeholder="Repita nova senha"/>  
-                    </IonItem>
-                    <IonButton expand="block" color="primary" type="submit" >Confirmar</IonButton>
+                    {errorMismatchNewPassword ? 
+                        <IonLabel color="danger"> <br/> {errorMismatchNewPassword}</IonLabel> 
+                        : errorMismatchNewPassword
+                    }
+                    <IonButton expand="block" color="primary" type="submit">Confirmar</IonButton>
                 </form>
             </div>     
         </IonContent>

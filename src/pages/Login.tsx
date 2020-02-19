@@ -18,16 +18,17 @@ const Login: React.FC= () => {
     const [password,setPassword] = useState();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    function handleSubmit(e:any){
+
+  function handleSubmit(e:any){
       e.preventDefault();
       if(username==='user' && password==="user"){
-        localStorage.logged=`${username + password}`
+        localStorage.setItem("logged",`${username + password}`); 
         setIsLoggedIn(true);
       }
     }
 
     return (
-      isLoggedIn ? <Redirect to="/search-awb"/> : 
+      isLoggedIn ?  <Redirect to={{pathname: "/search-awb" ,state:{isLoggedIn}}}/> : 
       <IonPage>
         <IonContent className="page">
             <div className="div-imagem">
