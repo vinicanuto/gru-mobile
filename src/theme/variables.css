@@ -3,13 +3,23 @@ http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
 :root {
-  /** primary **/
+  /** backup tema verde
   --ion-color-primary: rgb(168, 190, 43);
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #F1FFE7;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
   --ion-color-primary-shade: #a7bc29;
   --ion-color-primary-tint: #c5da44;
+  
+  primary **/
+
+  --ion-color-primary: rgb(35, 133, 179);
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #F1FFE7;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: rgb(27, 107, 145);
+  --ion-color-primary-tint: rgb(90, 159, 190);
+
 
   /** secondary **/
   --ion-color-secondary: #DBDBDB;

@@ -32,7 +32,7 @@ const Login: React.FC= () => {
       <IonPage>
         <IonContent className="page">
             <div className="div-imagem">
-                <img src="/assets/logo/logo.png" alt="GRU Airport" />
+                <img src="/assets/logo/logo-gru-cargo.png" alt="GRU Airport" />
             </div>
             <div className="login">
               <form  onSubmit={e=> {handleSubmit(e)}}>
